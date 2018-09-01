@@ -1,28 +1,18 @@
 const fs = require('fs');
 const Discord = require('discord.js');
 const { prefix, token, badwords, responses, reactions } = require('./config.json');
+const functions = require('./functions');
 
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
 
-const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
-const informationCommandFiles = fs.readdirSync('./commands/information').filter(file => file.endsWith('.js'));
-const interactionCommandFiles = fs.readdirSync('./commands/interaction').filter(file => file.endsWith('.js'));
+// functions.loadFiles('./commands')
+// functions.loadFiles('./commands/interaction');
+// functions.loadFiles('./commands/information');
 
-for (const file of commandFiles) {
-	const command = require(`./commands/${file}`);
-	client.commands.set(command.name, command);
-}
-
-for (const file of interactionCommandFiles) {
-	const command = require(`./commands/interaction/${file}`);
-	client.commands.set(command.name, command);
-}
-
-for (const file of informationCommandFiles) {
-	const command = require(`./commands/information/${file}`);
-	client.commands.set(command.name, command);
-}
+loadFiles('./commands')
+loadFiles('./commands/interaction');
+loadFiles('./commands/information');
 
 const cooldowns = new Discord.Collection();
 
@@ -32,16 +22,6 @@ client.on('ready', () => {
 });
 
 const thechannels = new Discord.Collection();
-// client.guild.channels.forEach((channel) => {
-// 	if (channel.type == 'text') {
-// 		thechannels.set(channel.id);
-// 	}
-// });
-// const responsesArray = [];
-// for (let i = 0; i < responses.length; i++) {
-// 	responsesArray.push(responses[i].cited + ' ➤ ' + responses[i].response);
-// }
-// //console.log(responsesArray);
 
 client.on('message', async message => {
 	if (message.author.bot) return;
@@ -136,3 +116,11 @@ client.on('guildMemberAdd', MemberAdd => {
 });
 
 client.login(token);
+
+function loadFiles(folderPath) {
+	const commandFiles = fs.readdirSync(folderPath).filter(file => file.endsWith('.js'));
+	for (const file of commandFiles) {
+		const command = require(`` + folderPath + `/${file}`);
+		client.commands.set(command.name, command);
+	}
+}

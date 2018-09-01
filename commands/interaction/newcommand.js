@@ -17,7 +17,7 @@ module.exports = {
 		if (args.length > 1) return message.reply('there is too many args');
 		const newcommand = commands.get(args[0]);
 		try {
-			message.channel.send(`:loudspeaker: Hi @everyone ! There is a __**new**__ command available : \`${prefix}`+ newcommand.name + `\``);
+			message.channel.send(`:loudspeaker: Hi @everyone ! There is a __**new**__ command available : \`${prefix}` + newcommand.name + `\``);
 
 			if (newcommand.description) data.push(`*${newcommand.description}*\n==========`);
 			if (newcommand.aliases) data.push(`**Aliases :** ${newcommand.aliases.join(', ')}`);
