@@ -1,5 +1,4 @@
-const { prefix } = require('../config.json');
-const { actions } = require('../config.json');
+const { prefix, actions } = require('../../config.json');
 
 module.exports = {
 	name: 'action',
@@ -19,6 +18,7 @@ module.exports = {
 		const verbs = actions.find((element) => {
 			return args[0] == element.verb;
 		});
+		if (!args[0].includes('@')) return message.reply('Please mention someone !');
 		if (verbs) {
 			message.channel.send(message.author + ' ' + verbs.action_begin + ' ' + args[1] + verbs.action_end);
 		}
