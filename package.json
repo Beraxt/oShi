@@ -1,0 +1,23 @@
+{
+  "name": "Blurple",
+  "version": "1.0.0",
+  "description": "Blurple is a discord bot which make basic tasks",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShAd0wInK/Blurple.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShAd0wInK/Blurple/issues"
+  },
+  "homepage": "https://github.com/ShAd0wInK/Blurple#readme",
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  }
+}
