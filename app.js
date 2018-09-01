@@ -1,6 +1,6 @@
 const fs = require('fs');
 const Discord = require('discord.js');
-const { prefix, token, badwords, responses, grr } = require('./config.json');
+const { prefix, token, badwords, responses, reactions } = require('./config.json');
 
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
@@ -58,10 +58,10 @@ client.on('message', async message => {
 			}
 		}
 	}
-	for (const key in grr) {
-		for (let j = 0; j < grr[key].words.length; j++) {
-			if(message.content.includes(grr[key].words[j])) {
-				message.react(grr[key].react);
+	for (const key in reactions) {
+		for (let j = 0; j < reactions[key].words.length; j++) {
+			if(message.content.includes(reactions[key].words[j])) {
+				message.react(reactions[key].react);
 			};
 		};
 	}
