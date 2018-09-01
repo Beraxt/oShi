@@ -7,9 +7,15 @@ client.commands = new Discord.Collection();
 
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 const informationCommandFiles = fs.readdirSync('./commands/information').filter(file => file.endsWith('.js'));
+const interactionCommandFiles = fs.readdirSync('./commands/interaction').filter(file => file.endsWith('.js'));
 
 for (const file of commandFiles) {
 	const command = require(`./commands/${file}`);
+	client.commands.set(command.name, command);
+}
+
+for (const file of interactionCommandFiles) {
+	const command = require(`./commands/interaction/${file}`);
 	client.commands.set(command.name, command);
 }
 
