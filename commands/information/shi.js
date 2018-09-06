@@ -10,13 +10,13 @@ module.exports = {
 	args: false,
 	guild: false,
 	execute(message, args) {
-		const exampleEmbed = {
+		const oShiEmbed = {
 			color: 0x1CCBFF,
 			title: ':arrow_right: **Add me** to your server !\n',
 			url: `${message.client.user.avatarURL}`,
 			author: {
 				name: `${message.client.user.username}`,
-				icon_url: 'https://cdn.discordapp.com/avatars/483717645233815563/bc77cf9023c2c87c1d664a2384af73d2.png?size=2048',
+				icon_url: `${message.client.user.avatarURL}`,
 				url: 'https://discordapp.com/oauth2/authorize?client_id=483717645233815563&scope=bot',
 			},
 			description: `:wave: Hello, I'm **\`🔵 ${message.client.user.username}\`**, a basic **Discord bot** thats performs only simple tasks for now,\nbut my *creator*, \`${message.client.users.get('301433177703186442').tag}\`, is always tring to improve me !`,
@@ -55,9 +55,9 @@ module.exports = {
 			timestamp: new Date(),
 			footer: {
 				text: `🔵 ${message.client.user.username} - ⓒ 2018 | Made with 💛 & Javascript`,
-				icon_url: 'https://cdn.discordapp.com/avatars/483717645233815563/bc77cf9023c2c87c1d664a2384af73d2.png?size=2048',
+				icon_url: `${message.client.user.avatarURL}`,
 			},
 		};
-		message.channel.send({ embed: exampleEmbed });
+		message.channel.send({ embed: oShiEmbed });
 	},
 };

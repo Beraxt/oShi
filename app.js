@@ -10,7 +10,7 @@ client.commands = new Discord.Collection();
 // functions.loadFiles('./commands/interaction');
 // functions.loadFiles('./commands/information');
 
-loadFiles('./commands')
+loadFiles('./commands');
 loadFiles('./commands/interaction');
 loadFiles('./commands/information');
 
