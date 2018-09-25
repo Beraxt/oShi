@@ -19,7 +19,7 @@ module.exports = {
 				icon_url: `${message.client.user.avatarURL}`,
 				url: 'https://discordapp.com/oauth2/authorize?client_id=483717645233815563&scope=bot',
 			},
-			description: `:wave: Hello, I'm **\`🔵 ${message.client.user.username}\`**, a basic **Discord bot** thats performs only simple tasks for now,\nbut my *creator*, \`${message.client.users.get('301433177703186442').tag}\`, is always tring to improve me !`,
+			description: `:wave: Hello, I'm **\`🔵 ${message.client.user.username}\`**, a basic **Discord bot** thats performs only simple tasks for now,\nbut my *creator*, \`${message.client.users.get('301433177703186442').tag}\`, is always trying to improve me !`,
 			thumbnail: {
 				url: `${message.client.user.avatarURL}`,
 			},

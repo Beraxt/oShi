@@ -11,7 +11,16 @@ module.exports = {
 	guild: false,
 	execute(message, args) {
 		const oShiClient = message.client.users.get('483717645233815563');
-		let authorStatus = message.author.presence.status;
+		const theUser = message.author;
+		const theMember = message.member;
+
+		const roleList = theMember.roles.map(role => ' ' + role.name);
+		roleList.shift();
+		console.log('==========');
+		console.log(roleList);
+		console.log('==========');
+
+		let authorStatus = theUser.presence.status;
 		switch (authorStatus) {
 		case 'online':
 			authorStatus = 'Ready to chat ! 🍏';
@@ -30,28 +39,30 @@ module.exports = {
 		const authorEmbed = {
 			color: 0x1CCBFF,
 			title: ':arrow_right: **Add me** to your server !\n',
-			//url: `${message.author.avatarURL}`,
+			//url: `${theUser.avatarURL}`,
 			author: {
-				name: `${message.author.tag}`,
-				icon_url: `${message.author.avatarURL}`,
+				name: `${theUser.tag}`,
+				icon_url: `${theUser.avatarURL}`,
 				url: 'https://discordapp.com/oauth2/authorize?client_id=483717645233815563&scope=bot',
 			},
-			description: `:wave: Hello, I'm **\`🔵 ${message.author.username}\`**, a basic **Discord bot** thats performs only simple tasks for now,\nbut my *creator*, \`$, is always tring to improve me !`,
+			description: `:wave: Hello ${theUser.username}\, Here is the basic informations about you !`,
 			thumbnail: {
-				url: `${message.author.avatarURL}`,
+				url: `${theUser.avatarURL}`,
 			},
 			fields: [
 				{
 					name: '\u200b',
-					value: ':white_check_mark: **__How to use me :__**',
+					value: ':information_source: __Informations about you :__',
 				},
 				{
-					name: `\`${prefix}<command>\``,
-					value: `Write \`${prefix}help\` to get information about how to use my commands !`,
+					name: '**Nickname here :**',
+					value: `${theMember.displayName}`,
+					inline: true,
 				},
 				{
-					name: '\u200b',
-					value: ':information_source: __Informations about me :__',
+					name: '**ID :**',
+					value: `${theUser.id}`,
+					inline: true,
 				},
 				{
 					name: '**Status :**',
@@ -59,18 +70,33 @@ module.exports = {
 					inline: true,
 				},
 				{
-					name: '**ID :**',
-					value: `${message.author.id}`,
+					name: '**You\'re playing :**',
+					value: `🕹 ${theMember.presence.game}`,
 					inline: true,
 				},
 				{
 					name: '**Created at :**',
-					value: `${message.author.createdAt}`,
+					value: `${theUser.createdAt}`,
 					inline: true,
 				},
 				{
-					name: '**premium at :**',
-					value: `${message.author.premium}`,
+					name: '**Join the server at :**',
+					value: `${theMember.joinedAt}`,
+					inline: true,
+				},
+				{
+					name: '**Roles :**',
+					value: `${roleList}`,
+					inline: true,
+				},
+				{
+					name: '**Highest role :**',
+					value: `${theMember.highestRole.name}`,
+					inline: true,
+				},
+				{
+					name: '**Kickable :**',
+					value: `${theMember.kickable}`,
 					inline: true,
 				},
 			],
@@ -81,7 +107,6 @@ module.exports = {
 			},
 		};
 		message.channel.send({ embed: authorEmbed });
-		console.log(`${message.client.users.get('301433177703186442').clientUser}`);
-		console.log('===========')
+
 	},
 };
