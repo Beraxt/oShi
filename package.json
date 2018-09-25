@@ -1,22 +1,22 @@
 {
-  "name": "Blurple",
+  "name": "oShi",
   "version": "1.0.0",
-  "description": "Blurple is a discord bot which make basic tasks",
+  "description": "oShi is a discord bot which make basic tasks",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ShAd0wInK/Blurple.git"
+    "url": "git+https://github.com/blyndusk/oShi.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ShAd0wInK/Blurple/issues"
+    "url": "https://github.com/blyndusk/oShi/issues"
   },
-  "homepage": "https://github.com/ShAd0wInK/Blurple#readme",
+  "homepage": "https://github.com/blyndusk/oShi#readme",
   "dependencies": {
     "discord.js": "^11.4.2",
     "eslint": "^5.5.0",
