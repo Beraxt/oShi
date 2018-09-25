@@ -9,6 +9,6 @@ module.exports = {
 
 		const taggedUser = message.mentions.users.first();
 
-		message.channel.send(`issou`);
+		message.channel.send('issou');
 	},
 };

@@ -39,7 +39,7 @@ module.exports = {
 		const authorEmbed = {
 			color: 0x1CCBFF,
 			title: ':arrow_right: **Add me** to your server !\n',
-			//url: `${theUser.avatarURL}`,
+			// url: `${theUser.avatarURL}`,
 			author: {
 				name: `${theUser.tag}`,
 				icon_url: `${theUser.avatarURL}`,
