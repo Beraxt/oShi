@@ -28,20 +28,13 @@ client.on('message', async message => {
 	for (let i = 0; i < badwords.length; i++) {
 		if (message.content.includes(badwords[i])) {
 			message.channel.bulkDelete(1, true);
-			message.reply('don\'t use bad language please :frowning:');
+			message.channel.send({embed = { color: 0x0000FF,
+			title } });
 		}
 	}
 	for (let i = 0; i < responses.length; i++) {
 		if (message.content.includes(responses[i].cited)) {
 			message.channel.send(responses[i].response + ` <@${message.author.id}>`);
-			try {
-				await message.react('🍎');
-				await message.react('🍊');
-				await message.react('🍇');
-			}
-			catch (error) {
-				console.error('One of the emojis failed to react.');
-			}
 		}
 	}
 	for (const key in reactions) {
@@ -107,7 +100,10 @@ client.on('message', async message => {
 	}
 	catch (error) {
 		console.error(error);
-		message.reply('there was an error trying to execute that command!');
+		message.channel.send({ embed: { color: 0xFF0000,
+			title: '**WARNING !**',
+			description: 'There have been an error with this command !',
+		} });
 	}
 });
 client.on('guildMemberAdd', MemberAdd => {

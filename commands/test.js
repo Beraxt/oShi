@@ -57,8 +57,7 @@ module.exports = {
 				icon_url: 'https://i.imgur.com/wSTFkRM.png',
 			},
 		};
-		
-		message.channel.send({ embed: exampleEmbed });
+		message.channel.author.send('odfeofe');
 	},
 };
 
