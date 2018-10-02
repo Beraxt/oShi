@@ -1,6 +1,6 @@
 module.exports = {
 	name: 'beep',
-	description: 'Beep.. Boop ? ',
+	description: '🤖 **|** Beep.. Boop ? ',
 	aliases: ['robot'],
 	usage: '',
 	type: 'interaction',

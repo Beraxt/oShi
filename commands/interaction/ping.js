@@ -1,6 +1,6 @@
 module.exports = {
 	name: 'ping',
-	description: 'Check if the bot is online.',
+	description: '🏓 **|** Check if the bot is online.',
 	aliases: ['pingpong'],
 	usage: '',
 	type: 'interaction',
