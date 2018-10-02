@@ -1,17 +1,17 @@
 module.exports = {
 	name: 'avatar',
-	description: 'Get the avatar URL of the tagged user(s), or your own avatar.',
+	description: '👁 **|** Send a picture of your entire avatar or a user\'s avatar ',
 	aliases: ['a', 'icon', 'pdp'],
 	usage: '|| @user',
 	type: 'information',
-	cooldown: 2,
+	cooldown: 15,
 	args: false,
 	guild: false,
 	execute(message, args) {
-		if (message.mentions.users.size) {
-			const theUser = message.mentions.users.first();
+		if (!args.length) {
+			const theUser = message.author;
 			const exampleEmbed = {
-				color: 0x0099ff,
+				color: 0x00ffd8,
 				title: `${theUser.username}'s avatar:`,
 				url: `${theUser.avatarURL}`,
 				image: {
@@ -21,9 +21,9 @@ module.exports = {
 			message.channel.send({ embed: exampleEmbed });
 		}
 		else {
-			const theUser = message.author;
+			const theUser = message.mentions.users.first();
 			const exampleEmbed = {
-				color: 0x0099ff,
+				color: 0x00ffd8,
 				title: `${theUser.username}'s avatar:`,
 				url: `${theUser.avatarURL}`,
 				image: {

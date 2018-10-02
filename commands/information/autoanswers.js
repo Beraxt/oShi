@@ -1,11 +1,12 @@
 const { responses } = require('../../config.json');
+
 module.exports = {
 	name: 'autoanswers',
-	description: 'Send all the auto answers of the bot !',
-	aliases: ['answers', 'answer'],
+	description: '🗃 **|** Send a list of the auto answers of the bot ! ',
+	aliases: ['auto', 'answers', 'answer'],
 	usage: '',
 	type: 'information',
-	cooldown: 30,
+	cooldown: 5,
 	args: false,
 	guild: false,
 	execute(message) {

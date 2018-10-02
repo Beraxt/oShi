@@ -2,11 +2,11 @@ const { prefix, actions } = require('../../config.json');
 
 module.exports = {
 	name: 'action',
-	description: 'Do an interaction with someone',
+	description: '⚔️ **|** Do an interaction with someone',
 	aliases: ['act'],
 	usage: '<action> <user>',
 	type: 'interaction',
-	cooldown: 2,
+	cooldown: 5,
 	args: true,
 	guild: true,
 	execute(message, args) {

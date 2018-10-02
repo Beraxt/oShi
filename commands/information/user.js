@@ -2,11 +2,11 @@ const { prefix } = require('../../config.json');
 
 module.exports = {
 	name: 'user',
-	description: 'Give information about someone !',
-	aliases: ['people'],
+	description: '👤👀 **|** Give information about someone !',
+	aliases: ['member'],
 	usage: '@user',
 	type: 'information',
-	cooldown: 5,
+	cooldown: 30,
 	args: true,
 	guild: false,
 	execute(message, args) {
