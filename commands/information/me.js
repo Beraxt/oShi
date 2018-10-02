@@ -2,11 +2,11 @@ const { prefix } = require('../../config.json');
 
 module.exports = {
 	name: 'me',
-	description: 'Give information about you !',
+	description: '👤 **|** Give information about you !',
 	aliases: ['myself'],
 	usage: '',
 	type: 'information',
-	cooldown: 5,
+	cooldown: 30,
 	args: false,
 	guild: false,
 	execute(message, args) {
@@ -16,9 +16,6 @@ module.exports = {
 
 		const roleList = theMember.roles.map(role => ' ' + role.name);
 		roleList.shift();
-		console.log('==========');
-		console.log(roleList);
-		console.log('==========');
 
 		let authorStatus = theUser.presence.status;
 		switch (authorStatus) {

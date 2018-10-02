@@ -1,13 +1,13 @@
 module.exports = {
 	name: 'doc',
-	description: 'Send Discord.js documentation',
+	description: '📑 **|** Send a direct message with Discord.js documentation links',
 	aliases: ['documentation'],
 	usage: '',
 	type: 'information',
-	cooldown: 5,
+	cooldown: 2,
 	args: false,
 	guild: false,
-	execute(message, args) {
+	execute(message) {
 		if (message.channel.type === 'text') {
 			message.reply('I\'ve sent you a message :incoming_envelope: !');
 		}

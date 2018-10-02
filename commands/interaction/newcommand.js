@@ -3,11 +3,11 @@ const { prefix } = require('../../config.json');
 
 module.exports = {
 	name: 'newcommand',
-	description: 'Make a general announce about a new command',
+	description: '📢 **|** Make a general announce about a new command',
 	aliases: ['n', 'nc', 'new'],
 	usage: '<command>',
 	type: 'interaction',
-	cooldown: 2,
+	cooldown: 999,
 	args: true,
 	guild: false,
 	botOwner: true,
@@ -19,7 +19,7 @@ module.exports = {
 		try {
 			message.channel.send(`:loudspeaker: Hi @everyone ! There is a __**new**__ command available : \`${prefix}` + newcommand.name + `\``);
 
-			if (newcommand.description) data.push(`*${newcommand.description}*\n==========`);
+			if (newcommand.description) data.push(`${newcommand.description}\n==========`);
 			if (newcommand.aliases) data.push(`**Aliases :** ${newcommand.aliases.join(', ')}`);
 			if (newcommand.usage) data.push(`**Usage :** \`${prefix}${newcommand.name} ${newcommand.usage}\``);
 			data.push(`**Cooldown :** ${newcommand.cooldown || 1} second(s)`);

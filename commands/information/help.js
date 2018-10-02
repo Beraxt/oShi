@@ -2,7 +2,7 @@ const { prefix } = require('../../config.json');
 
 module.exports = {
 	name: 'help',
-	description: 'List all of my commands or info about a specific command.',
+	description: '🔍 **|**List all commands or info about a specific command',
 	aliases: ['', 'h', 'commands'],
 	type: 'information',
 	usage: '|| <command>',
@@ -32,12 +32,12 @@ module.exports = {
 			return message.reply('that\'s not a valid command!');
 		}
 
-		data.push(`**Name :** ${command.name}`);
+		data.push(`**Name :** \`${command.name}\``);
 		if (command.description) data.push(`**Description :** ${command.description}\n==========`);
-		if (command.aliases) data.push(`**Aliases :** ${command.aliases.join(', ')}`);
+		if (command.aliases) data.push(`**Aliases :** \`${command.aliases.join(` - `)}\``);
 		if (command.usage) data.push(`**Usage :** \`${prefix}${command.name} ${command.usage}\``);
 		if (command.type) data.push(`**Type :** ${command.type}`);
-		data.push(`**Cooldown :** ${command.cooldown || 1} second(s)`);
+		data.push(`**Cooldown :** ${command.cooldown || 2} seconds`);
 
 
 		message.channel.send(data, { split: true });

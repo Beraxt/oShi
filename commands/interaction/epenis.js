@@ -2,11 +2,11 @@ const { epenis } = require('../../config.json');
 
 module.exports = {
 	name: 'epenis',
-	description: 'Give a size of your e-penis o/',
+	description: '🍆 **|** Give a size of your e-penis o/',
 	aliases: ['penis', 'dick', 'pickle'],
 	usage: '|| @user',
 	type: 'interaction',
-	cooldown: 2,
+	cooldown: 15,
 	args: false,
 	guild: false,
 	execute(message, args) {

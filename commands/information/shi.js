@@ -2,7 +2,7 @@ const { prefix } = require('../../config.json');
 
 module.exports = {
 	name: 'shi',
-	description: 'Give information about the bot !',
+	description: '🔵 **|** Give information about the bot !',
 	aliases: ['bot'],
 	usage: '',
 	type: 'information',
