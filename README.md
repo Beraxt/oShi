@@ -25,6 +25,12 @@
 * `o!autoanswers` => send a list with all the autoanswers
 * `o!epenis || @user` => give your e-penis size 
 
+## Dependencies
+
+* [Discord.js](https://discord.js.org/#/)
+* [eslint](https://eslint.org/)
+* [pm2](http://pm2.keymetrics.io/)
+
 ## Want to help me ? 
 
 Did you spot a bug ? Do you have some upgrades ideas ? You can send me an [issue](https://github.com/blyndusk/oShi/issues) and I'll take about it ! 
