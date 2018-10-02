@@ -60,5 +60,3 @@ module.exports = {
 		message.channel.author.send('odfeofe');
 	},
 };
-
-
