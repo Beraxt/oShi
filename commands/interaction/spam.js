@@ -8,8 +8,6 @@ module.exports = {
 	args: true,
 	guild: false,
 	execute(message, yourmessage) {
-		console.log(message.channel.id);
-		console.log(message.client.channels.get('484486544716202014'));
 		message.client.channels.get('484486544716202014').send(yourmessage);
 	},
 };

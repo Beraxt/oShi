@@ -13,7 +13,6 @@ client.commands = new Discord.Collection();
 loadFiles('./commands');
 loadFiles('./commands/interaction');
 loadFiles('./commands/information');
-console.log(client.commands);
 
 const cooldowns = new Discord.Collection();
 

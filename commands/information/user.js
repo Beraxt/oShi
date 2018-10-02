@@ -16,10 +16,6 @@ module.exports = {
 
 		const roleList = theMember.roles.map(role => ' ' + role.name);
 		roleList.shift();
-		console.log('==========');
-		console.log(roleList);
-		console.log('==========');
-
 		let authorStatus = theUser.presence.status;
 		switch (authorStatus) {
 		case 'online':
