@@ -13,6 +13,7 @@ client.commands = new Discord.Collection();
 loadFiles('./commands');
 loadFiles('./commands/interaction');
 loadFiles('./commands/information');
+console.log(client.commands);
 
 const cooldowns = new Discord.Collection();
 
@@ -28,8 +29,10 @@ client.on('message', async message => {
 	for (let i = 0; i < badwords.length; i++) {
 		if (message.content.includes(badwords[i])) {
 			message.channel.bulkDelete(1, true);
-			message.channel.send({embed = { color: 0x0000FF,
-			title } });
+			message.channel.send({ embed: { color: 0xFF0000,
+				title: '**WARNING !**',
+				description: 'Don\'t use bad language please :frowning: !',
+			} });
 		}
 	}
 	for (let i = 0; i < responses.length; i++) {
