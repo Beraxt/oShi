@@ -11,8 +11,8 @@
         - [1. Run it ( poor man's version ) :](#1-run-it--poor-mans-version--)
         - [2. Add `oShi` to your server :](#2-add-oshi-to-your-server-)
     - [II - Basic commands :](#ii---basic-commands-)
-        - [Informations :](#informations-)
-        - [Interaction :](#interaction-)
+        - [2.Informations :](#2informations-)
+        - [3.Interaction :](#3interaction-)
     - [III - Dependencies](#iii---dependencies)
     - [IV - Want to help me ?](#iv---want-to-help-me-)
 
@@ -31,12 +31,14 @@
 
 ## II - Basic commands :
 
-### Informations :
+* `o!help || command` => give information about a command
+
+### 2.Informations :
 * `o!shi` => give informations about the bot
 * `o!me` => give information about you
 * `o!user @user` => give information about a user
 
-### Interaction :
+### 3.Interaction :
 * `o!action exampleaction @user` => interract with a user with a specific action
 * `o!autoanswers` => send a list with all the autoanswers
 * `o!epenis || @user` => give your e-penis size 
