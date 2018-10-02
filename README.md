@@ -11,8 +11,9 @@
         - [1. Run it ( poor man's version ) :](#1-run-it--poor-mans-version--)
         - [2. Add `oShi` to your server :](#2-add-oshi-to-your-server-)
     - [II - Basic commands :](#ii---basic-commands-)
-        - [2.Informations :](#2informations-)
-        - [3.Interaction :](#3interaction-)
+            - [Cooldowns:](#cooldowns)
+        - [1.Informations :](#1informations-)
+        - [2.Interaction :](#2interaction-)
     - [III - Dependencies](#iii---dependencies)
     - [IV - Want to help me ?](#iv---want-to-help-me-)
 
@@ -33,12 +34,19 @@
 
 * `o!help || command` => give information about a command
 
-### 2.Informations :
+#### Cooldowns: 
+* The message takes an entire screen: `30s`
+* The message takes an half screen: `15s`
+* The message takes many lines: `5s`
+* The message takes one line: `2s`
+
+
+### 1.Informations :
 * `o!shi` => give informations about the bot
 * `o!me` => give information about you
 * `o!user @user` => give information about a user
 
-### 3.Interaction :
+### 2.Interaction :
 * `o!action exampleaction @user` => interract with a user with a specific action
 * `o!autoanswers` => send a list with all the autoanswers
 * `o!epenis || @user` => give your e-penis size 
