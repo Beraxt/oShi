@@ -28,7 +28,7 @@
 * At the root of the repo, lanch pm2 with this command `pm2 start app.js --watch`
 
 ### 2. Add `oShi` to your server :
-> [use this link 🔵](https://discordapp.com/oauth2/authorize?&client_id=483717645233815563&scope=bot&permissions=1745349696)
+> [use this link 🔵](https://discordapp.com/oauth2/authorize?&client_id=NotAvailableNow&scope=bot&permissions=1745349696)
 
 ## II - Basic commands :
 
