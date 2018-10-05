@@ -12,7 +12,7 @@ module.exports = {
 	execute(message, args) {
 		const oShiClient = message.client.users.get('483717645233815563');
 		const theUser = message.mentions.users.first();
-		const theMember = message.guild.members.get(theUser.id);
+		const theMember = message.mentions.members.first();
 
 		const roleList = theMember.roles.map(role => ' ' + role.name);
 		roleList.shift();
