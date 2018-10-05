@@ -1,7 +1,7 @@
 const fs = require('fs');
 const Discord = require('discord.js');
 const { prefix, token, badwords, responses, reactions } = require('./config.json');
-const functions = require('./functions');
+// const functions = require('./functions');
 
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
