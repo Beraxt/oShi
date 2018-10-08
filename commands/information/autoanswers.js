@@ -1,4 +1,4 @@
-const { responses } = require('../../config.json');
+const { responses } = require('../../data.json');
 
 module.exports = {
 	name: 'autoanswers',

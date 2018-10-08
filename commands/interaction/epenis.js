@@ -1,4 +1,4 @@
-const { epenis } = require('../../config.json');
+const { epenis } = require('../../data.json');
 
 module.exports = {
 	name: 'epenis',

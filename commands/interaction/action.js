@@ -1,4 +1,5 @@
-const { prefix, actions } = require('../../config.json');
+const { prefix } = require('../../config.json');
+const { actions } = require('../../data.json');
 
 module.exports = {
 	name: 'action',
