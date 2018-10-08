@@ -1,4 +1,5 @@
 const { prefix } = require('../../config.json');
+const { status } = require('../../data.json');
 
 module.exports = {
 	name: 'me',
@@ -16,19 +17,8 @@ module.exports = {
 		const roleList = theMember.roles.map(role => ' ' + role.name);
 		roleList.shift();
 		let authorStatus = theUser.presence.status;
-		switch (authorStatus) {
-		case 'online':
-			authorStatus = 'Ready to chat ! 🍏';
-			break;
-		case 'idle':
-			authorStatus = 'AFK. 🍊';
-			break;
-		case 'dnd':
-			authorStatus = 'Busy I think ? 🍅';
-			break;
-		case 'offline':
-			authorStatus = 'Sleeping.. 🥚';
-			break;
+		for (let i = 0; i < status.length; i++) {
+			if (authorStatus === status[i].status) authorStatus = status[i].message;
 		}
 
 		const authorEmbed = {
