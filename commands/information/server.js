@@ -1,3 +1,5 @@
+const { security } = require('../../data.json');
+
 module.exports = {
 	name: 'server',
 	description: 'Display info about this server.',
@@ -9,28 +11,15 @@ module.exports = {
 	guild: true,
 	execute(message, args) {
 		const theGuild = message.guild;
+		console.log(theGuild.mfaLevel);
 
 		let sizeMessage = '';
 		if (theGuild.large) sizeMessage = 'This server is huge :muscle: !';
 		else sizeMessage = 'This server is so little :baby: !';
 
 		let securityMessage = '';
-		switch (theGuild.mfaLevel) {
-		case 0:
-			securityMessage = '🗑 Less secure than a Wordpress';
-			break;
-		case 1:
-			securityMessage = '🥉 Every random can ruin your server';
-			break;
-		case 2:
-			securityMessage = '🥈 Every patient random can ruin your server';
-			break;
-		case 3:
-			securityMessage = '🥇 Every very patient random can ruin your server';
-			break;
-		case 4:
-			securityMessage = '🏆 Every connected random can ruin your server';
-			break;
+		for (let i = 0; i < security.length; i++) {
+			if (theGuild.mfaLevel === security[i].index) securityMessage = security[i].message;
 		}
 
 		let afkChannel;
