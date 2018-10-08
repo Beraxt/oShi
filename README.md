@@ -53,9 +53,9 @@
 
 ## III - Dependencies
 
-* [Discord.js](https://discord.js.org/#/)
-* [eslint](https://eslint.org/)
-* [pm2](http://pm2.keymetrics.io/)
+* [Discord.js](https://discord.js.org/#/) `11.4.2`
+* [eslint](https://eslint.org/) `5.6.1`
+* [pm2](http://pm2.keymetrics.io/) `3.2.2`
 
 ## IV - Want to help me ? 
 
