@@ -4,7 +4,7 @@ module.exports = {
 	aliases: ['nick'],
 	usage: 'yourNickname',
 	type: 'interaction',
-	cooldown: 3600,
+	cooldown: 30,
 	args: true,
 	guild: true,
 	execute(message, args) {

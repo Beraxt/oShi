@@ -3,14 +3,13 @@ const { prefix } = require('../../config.json');
 module.exports = {
 	name: 'me',
 	description: '👤 **|** Give information about you !',
-	aliases: ['myself'],
+	aliases: ['m', 'myself'],
 	usage: '',
 	type: 'information',
 	cooldown: 30,
 	args: false,
 	guild: false,
 	execute(message, args) {
-		const oShiClient = message.client.users.get('483717645233815563');
 		const theUser = message.author;
 		const theMember = message.member;
 
@@ -33,7 +32,7 @@ module.exports = {
 		}
 
 		const authorEmbed = {
-			color: 0xcae021,
+			color: theMember.displayColor,
 			// title: ':arrow_right: **Add me** to your server !\n',
 			// url: `${theUser.avatarURL}`,
 			author: {

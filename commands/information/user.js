@@ -10,7 +10,6 @@ module.exports = {
 	args: true,
 	guild: false,
 	execute(message, args) {
-		const oShiClient = message.client.users.get('483717645233815563');
 		const theUser = message.mentions.users.first();
 		const theMember = message.mentions.members.first();
 		console.log('theUser = ');
@@ -36,7 +35,7 @@ module.exports = {
 		}
 
 		const userEmbed = {
-			color: 0xcae021,
+			color: theMember.displayColor,
 			// title: ':arrow_right: **Add me** to your server !\n',
 			// url: `${theUser.avatarURL}`,
 			author: {
