@@ -1,7 +1,7 @@
 module.exports = {
 	name: 'doc',
 	description: '📑 **|** Send a direct message with Discord.js documentation links',
-	aliases: ['documentation'],
+	aliases: ['d', 'documentation'],
 	usage: '',
 	type: 'information',
 	cooldown: 2,

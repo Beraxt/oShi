@@ -3,7 +3,7 @@ const { epenis } = require('../../config.json');
 module.exports = {
 	name: 'epenis',
 	description: '🍆 **|** Give a size of your e-penis o/',
-	aliases: ['penis', 'dick', 'pickle'],
+	aliases: ['e', 'penis', 'dick', 'pickle'],
 	usage: '|| @user',
 	type: 'interaction',
 	cooldown: 15,

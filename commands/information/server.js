@@ -1,7 +1,7 @@
 module.exports = {
 	name: 'server',
 	description: 'Display info about this server.',
-	aliases: ['guild'],
+	aliases: ['s', 'guild'],
 	usage: '',
 	type: 'information',
 	cooldown: 2,
