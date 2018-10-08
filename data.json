@@ -1,0 +1,76 @@
+{
+    "responses": [
+        {
+            "cited": "aled",
+            "response": ":grimacing: **⎮** what's wrong ?"
+        },
+        {
+            "cited": "oscour",
+            "response": ":kissing_smiling_eyes: **⎮** Shhh.. It will be okay.."
+        },
+        {
+            "cited": "alarm",
+            "response": ":rotating_light: **⎮** ALAAARM !!"
+        },
+        {
+            "cited": "hello",
+            "response": ":wave: **⎮** Heyy, wassup ?"
+        },
+        {
+            "cited": "good night",
+            "response": ":sleeping: **⎮** Make sweet dreams !"
+        },
+        {
+            "cited": "don't smoke weed",
+            "response": ":angel: **|** *Smoke* **JESUS !!**"
+        }
+    ],"actions": [
+        {
+            "verb": "hug",
+            "action_begin": "give a huge hug to",
+            "action_end": ", their love is true ! :heart:"
+        },
+        {
+            "verb": "kiss",
+            "action_begin": "approach his lips to",
+            "action_end": " and kiss him/her lovely ! :kiss:"
+        },
+        {
+            "verb": "kill",
+            "action_begin": "take a gun, aim",
+            "action_end": ", and press the trigger .. :gun:"
+        },
+        {
+            "verb": "punch",
+            "action_begin": "punch",
+            "action_end": " with passion ! :fist:"
+        }
+    ],
+    "epenis": [
+        {
+            "size": 2.5,
+            "animal": "cat",
+            "pic": "https://img-aws.ehowcdn.com/600x600p/photos.demandstudios.com/getty/article/165/76/87490163.jpg"
+        },
+        {
+            "size": 5,
+            "animal": "orangutans",
+            "pic": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Orang_Utan%2C_Semenggok_Forest_Reserve%2C_Sarawak%2C_Borneo%2C_Malaysia.JPG/290px-Orang_Utan%2C_Semenggok_Forest_Reserve%2C_Sarawak%2C_Borneo%2C_Malaysia.JPG"
+        },
+        {
+            "size": 7.5,
+            "animal": "human",
+            "pic": "https://jooinn.com/images/thumbs-up-1.png"
+        },
+        {
+            "size": 10,
+            "animal": "dog",
+            "pic": "https://images.theconversation.com/files/205966/original/file-20180212-58348-7huv6f.jpeg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip"
+        },
+        {
+            "size": 12.5,
+            "animal": "sea turtle",
+            "pic": "http://www.zlechien.fr/wp-content/uploads/2017/07/turtle5.jpg"
+        }
+    ]
+}
