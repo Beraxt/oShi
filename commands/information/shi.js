@@ -17,7 +17,7 @@ module.exports = {
 			author: {
 				name: `${message.client.user.username}`,
 				icon_url: `${message.client.user.avatarURL}`,
-				url: 'https://discordapp.com/oauth2/authorize?client_id=483717645233815563&scope=bot',
+				url: 'https://discordapp.com/oauth2/authorize?&client_id=483717645233815563&scope=bot&permissions=1745349696',
 			},
 			description: `:wave: Hello, I'm **\`🔵 ${message.client.user.username}\`**, a basic **Discord bot** thats performs only simple tasks for now,\nbut my *creator*, \`${message.client.users.get('301433177703186442').tag}\`, is always trying to improve me !`,
 			thumbnail: {
