@@ -1,30 +1,5 @@
 {
-    "responses": [
-        {
-            "cited": "aled",
-            "response": ":grimacing: **⎮** what's wrong ?"
-        },
-        {
-            "cited": "oscour",
-            "response": ":kissing_smiling_eyes: **⎮** Shhh.. It will be okay.."
-        },
-        {
-            "cited": "alarm",
-            "response": ":rotating_light: **⎮** ALAAARM !!"
-        },
-        {
-            "cited": "hello",
-            "response": ":wave: **⎮** Heyy, wassup ?"
-        },
-        {
-            "cited": "good night",
-            "response": ":sleeping: **⎮** Make sweet dreams !"
-        },
-        {
-            "cited": "don't smoke weed",
-            "response": ":angel: **|** *Smoke* **JESUS !!**"
-        }
-    ],"actions": [
+    "actions": [
         {
             "verb": "hug",
             "action_begin": "give a huge hug to",
@@ -72,5 +47,71 @@
             "animal": "sea turtle",
             "pic": "http://www.zlechien.fr/wp-content/uploads/2017/07/turtle5.jpg"
         }
-    ]
+    ],
+    "security": [
+        {
+            "index": 0,
+            "message": "🗑 Less secure than a Wordpress"
+        },
+        {
+            "index": 1,
+            "message": "🥉 Every random can ruin your server"
+        },
+        {
+            "index": 2,
+            "message": "🥈 Every patient random can ruin your server"
+        },
+        {
+            "index": 3,
+            "message": "🥇 Every very patient random can ruin your server"
+        },
+        {
+            "index": 4,
+            "message": "🏆 Every connected random can ruin your server"
+        }
+    ],
+    "status": [
+        {
+            "status": "online",
+            "message": "Ready to chat ! 🍏"
+        },
+        {
+            "status": "idle",
+            "message": "AFK. 🍊"
+        },
+        {
+            "status": "dnd",
+            "message": "Busy I think ? 🍅"
+        },
+        {
+            "status": "offline",
+            "message": "Sleeping.. 🥚"
+        }
+    ],
+    "responses": [
+        {
+            "cited": "aled",
+            "response": ":grimacing: **⎮** what's wrong ?"
+        },
+        {
+            "cited": "oscour",
+            "response": ":kissing_smiling_eyes: **⎮** Shhh.. It will be okay.."
+        },
+        {
+            "cited": "alarm",
+            "response": ":rotating_light: **⎮** ALAAARM !!"
+        },
+        {
+            "cited": "hello",
+            "response": ":wave: **⎮** Heyy, wassup ?"
+        },
+        {
+            "cited": "good night",
+            "response": ":sleeping: **⎮** Make sweet dreams !"
+        },
+        {
+            "cited": "don't smoke weed",
+            "response": ":angel: **|** *Smoke* **JESUS !!**"
+        }
+    ],
 }
