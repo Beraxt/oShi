@@ -48,6 +48,20 @@
             "pic": "http://www.zlechien.fr/wp-content/uploads/2017/07/turtle5.jpg"
         }
     ],
+    "explicitcontent": [
+        {
+            "index": 0,
+            "message": "@nobody"
+        },
+        {
+            "index": 1,
+            "message": "@without role"
+        },
+        {
+            "index": 2,
+            "message": "@everyone"
+        },
+    ],
     "security": [
         {
             "index": 0,
