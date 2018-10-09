@@ -1,4 +1,4 @@
-const { security } = require('../../data.json');
+const { explicitcontent, security } = require('../../data.json');
 
 module.exports = {
 	name: 'server',
@@ -12,6 +12,7 @@ module.exports = {
 	execute(message, args) {
 		const theGuild = message.guild;
 		console.log(theGuild.mfaLevel);
+		console.log(theGuild.mfaLevel);
 
 		let sizeMessage = '';
 		if (theGuild.large) sizeMessage = 'This server is huge :muscle: !';
@@ -20,6 +21,10 @@ module.exports = {
 		let securityMessage = '';
 		for (let i = 0; i < security.length; i++) {
 			if (theGuild.mfaLevel === security[i].index) securityMessage = security[i].message;
+		}
+		let explicitContentMessage = '';
+		for (let i = 0; i < explicitcontent.length; i++) {
+			if (theGuild.explicitContentFilter === explicitcontent[i].index) explicitContentMessage = explicitcontent[i].message;
 		}
 
 		let afkChannel;
@@ -78,6 +83,11 @@ module.exports = {
 				{
 					name: '**Security level :**',
 					value: `${securityMessage}`,
+					inline: true,
+				},
+				{
+					name: '**Explicit content level :**',
+					value: `\`${explicitContentMessage}\``,
 					inline: true,
 				},
 			],
