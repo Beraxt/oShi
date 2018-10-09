@@ -1,6 +1,6 @@
 module.exports = {
 	name: 'avatar',
-	description: '👁 **|** Send a picture of your entire avatar or a user\'s avatar ',
+	description: ':eye: **|** Send a picture of your entire avatar or a user\'s avatar ',
 	aliases: ['a', 'icon', 'pdp'],
 	usage: '|| @user',
 	type: 'information',

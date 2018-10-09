@@ -2,7 +2,7 @@ const { explicitcontent, security } = require('../../data.json');
 
 module.exports = {
 	name: 'server',
-	description: 'Display info about this server.',
+	description: ':gear: **|** Display info about this server.',
 	aliases: ['s', 'g', 'guild'],
 	usage: '',
 	type: 'information',

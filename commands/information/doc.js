@@ -1,6 +1,6 @@
 module.exports = {
 	name: 'doc',
-	description: '📑 **|** Send a direct message with Discord.js documentation links',
+	description: ':bookmark_tabs: **|** Send a direct message with Discord.js documentation links',
 	aliases: ['d', 'documentation'],
 	usage: '',
 	type: 'information',

@@ -3,7 +3,7 @@ const { status } = require('../../data.json');
 
 module.exports = {
 	name: 'me',
-	description: '👤 **|** Give information about you !',
+	description: ':bust_in_silhouette: **|** Give information about you !',
 	aliases: ['m', 'myself'],
 	usage: '',
 	type: 'information',
@@ -104,6 +104,11 @@ module.exports = {
 					inline: true,
 				},
 			],
+			timestamp: new Date(),
+			footer: {
+				text: `🔵 ${message.client.user.username} - ⓒ 2018 | Made with 💛 & Javascript`,
+				icon_url: `${message.client.user.avatarURL}`,
+			},
 		};
 		message.channel.send({ embed: authorEmbed });
 

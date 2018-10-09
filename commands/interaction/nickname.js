@@ -1,6 +1,6 @@
 module.exports = {
 	name: 'nickname',
-	description: 'Check if the bot is online.',
+	description: ':label: **|** Change your username',
 	aliases: ['nick'],
 	usage: 'yourNickname',
 	type: 'interaction',
