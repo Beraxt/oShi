@@ -43,6 +43,7 @@
 
 ### 1.Informations :
 * `o!shi` => give informations about the bot
+* `o!server` => give informations about the server
 * `o!me` => give information about you
 * `o!user @user` => give information about a user
 
