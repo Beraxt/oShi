@@ -3,7 +3,7 @@ const { prefix } = require('../../config.json');
 
 module.exports = {
 	name: 'newcommand',
-	description: '📢 **|** Make a general announce about a new command',
+	description: ':loudspeaker: **|** Make a general announce about a new command',
 	aliases: ['n', 'nc', 'new'],
 	usage: '<command>',
 	type: 'interaction',

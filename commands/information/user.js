@@ -2,7 +2,7 @@ const { prefix } = require('../../config.json');
 
 module.exports = {
 	name: 'user',
-	description: '👤👀 **|** Give information about someone !',
+	description: ':bust_in_silhouette::eyes: **|** Give information about someone !',
 	aliases: ['u', 'member'],
 	usage: '@user',
 	type: 'information',
@@ -21,16 +21,16 @@ module.exports = {
 		let authorStatus = theUser.presence.status;
 		switch (authorStatus) {
 		case 'online':
-			authorStatus = 'Ready to chat ! 🍏';
+			authorStatus = 'Ready to chat ! :green_apple';
 			break;
 		case 'idle':
-			authorStatus = 'AFK. 🍊';
+			authorStatus = 'AFK. :orange:';
 			break;
 		case 'dnd':
-			authorStatus = 'Busy I think ? 🍅';
+			authorStatus = 'Busy I think ? :tomato:';
 			break;
 		case 'offline':
-			authorStatus = 'Sleeping.. 🥚';
+			authorStatus = 'Sleeping.. :egg:';
 			break;
 		}
 
@@ -117,6 +117,11 @@ module.exports = {
 					inline: true,
 				},
 			],
+			timestamp: new Date(),
+			footer: {
+				text: `🔵 ${message.client.user.username} - ⓒ 2018 | Made with 💛 & Javascript`,
+				icon_url: `${message.client.user.avatarURL}`,
+			},
 		};
 		message.channel.send({ embed: userEmbed });
 	},
