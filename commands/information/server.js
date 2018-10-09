@@ -27,6 +27,34 @@ module.exports = {
 			if (theGuild.explicitContentFilter === explicitcontent[i].index) explicitContentMessage = explicitcontent[i].message;
 		}
 
+		// let statusStats;
+		// for (let i = 0; i < theGuild.memberCount; i++) {
+		// 	const element = array[i];
+		// }
+		const statusMap = new Map();
+		statusMap.set('online', 0);
+		statusMap.set('idle', 0);
+		statusMap.set('dnd', 0);
+		statusMap.set('offline', 0);
+		for (const [key, value] of theGuild.members) {
+			switch (value.presence.status) {
+			case 'online':
+				statusMap.set('online', statusMap.get('online') + 1);
+				break;
+			case 'idle':
+				statusMap.set('idle', statusMap.get('idle') + 1);
+				break;
+			case 'dnd':
+				statusMap.set('dnd', statusMap.get('dnd') + 1);
+				break;
+			case 'offline':
+				statusMap.set('offline', statusMap.get('offline') + 1);
+				break;
+			}
+		}
+		console.log(statusMap.get('online'));
+		const statusList = '🍏 **' + statusMap.get('online') + '** , 🍊 **' + statusMap.get('idle') + '** , 🍅 **' + statusMap.get('dnd') + '** ,🥚**' + statusMap.get('offline') + '**';
+
 		let afkChannel;
 		if (theGuild.afkChannel) afkChannel = theGuild.afkChannel.name;
 		else afkChannel = '❌';
@@ -71,8 +99,8 @@ module.exports = {
 					inline: true,
 				},
 				{
-					name: '**Members count :**',
-					value: `${theGuild.memberCount}`,
+					name: '**Members status :**',
+					value: statusList,
 					inline: true,
 				},
 				{
