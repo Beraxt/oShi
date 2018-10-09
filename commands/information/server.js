@@ -6,13 +6,11 @@ module.exports = {
 	aliases: ['s', 'g', 'guild'],
 	usage: '',
 	type: 'information',
-	cooldown: 2,
+	cooldown: 15,
 	args: false,
 	guild: true,
 	execute(message, args) {
 		const theGuild = message.guild;
-		console.log(theGuild.mfaLevel);
-		console.log(theGuild.mfaLevel);
 
 		let sizeMessage = '';
 		if (theGuild.large) sizeMessage = 'This server is huge :muscle: !';
@@ -27,10 +25,6 @@ module.exports = {
 			if (theGuild.explicitContentFilter === explicitcontent[i].index) explicitContentMessage = explicitcontent[i].message;
 		}
 
-		// let statusStats;
-		// for (let i = 0; i < theGuild.memberCount; i++) {
-		// 	const element = array[i];
-		// }
 		const statusMap = new Map();
 		statusMap.set('online', 0);
 		statusMap.set('idle', 0);
@@ -52,8 +46,7 @@ module.exports = {
 				break;
 			}
 		}
-		console.log(statusMap.get('online'));
-		const statusList = '🍏 **' + statusMap.get('online') + '** , 🍊 **' + statusMap.get('idle') + '** , 🍅 **' + statusMap.get('dnd') + '** ,🥚**' + statusMap.get('offline') + '**';
+		const statusList = '**🍏 ' + statusMap.get('online') + '  🍊 ' + statusMap.get('idle') + '  🍅 ' + statusMap.get('dnd') + ' 🥚' + statusMap.get('offline') + '**';
 
 		let afkChannel;
 		if (theGuild.afkChannel) afkChannel = theGuild.afkChannel.name;
@@ -61,14 +54,14 @@ module.exports = {
 
 		const guildEmbed = {
 			color: 0x1CCBFF,
-			title: ':arrow_right: *go* !\n',
+			title: ':point_down: __**S E R V E R / G U I L D   I N F O R M A T I O N S**__ :point_down:',
 			// url: `${theGuild.iconURL}`,
 			author: {
 				name: `${theGuild.name}`,
 				icon_url: `${theGuild.iconURL}`,
 				// url: 'https://discordapp.com/oauth2/authorize?&client_id=483717645233815563&scope=bot&permissions=1745349696',
 			},
-			description: 'Here\'s some informations about this server !',
+			description: '\u200b',
 			thumbnail: {
 				url: `${theGuild.iconURL}`,
 			},

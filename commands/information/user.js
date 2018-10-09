@@ -36,7 +36,7 @@ module.exports = {
 
 		const userEmbed = {
 			color: theMember.displayColor,
-			// title: ':arrow_right: **Add me** to your server !\n',
+			title: ':point_down: __**U S E R   I N F O R M A T I O N S**__ :point_down:',
 			// url: `${theUser.avatarURL}`,
 			author: {
 				name: `${theUser.tag}`,
@@ -53,22 +53,27 @@ module.exports = {
 					value: ':bust_in_silhouette: __**User informations :**__',
 				},
 				{
-					name: '**ID :**',
+					name: ':id: **ID :**',
 					value: `${theUser.id}`,
 					inline: true,
 				},
 				{
-					name: '**Status :**',
+					name: ':bulb: **Status :**',
 					value: `${authorStatus}`,
 					inline: true,
 				},
 				{
-					name: '**User account created at :**',
+					name: ':hourglass_flowing_sand: **User account created at :**',
 					value: `${theUser.createdAt}`,
 					inline: true,
 				},
 				{
-					name: '**Is a bot :**',
+					name: ':joystick: **Playing :**',
+					value: `${theMember.presence.game}`,
+					inline: true,
+				},
+				{
+					name: ':robot: **Is a bot :**',
 					value: `${theUser.bot}`,
 					inline: true,
 				},
@@ -77,47 +82,37 @@ module.exports = {
 					value: ':busts_in_silhouette: __**Guild member informations :**__',
 				},
 				{
-					name: '**Nickname on this guild :**',
+					name: ':label: **Nickname on this guild :**',
 					value: `${theMember.displayName}`,
 					inline: true,
 				},
 				{
-					name: '**Playing :**',
-					value: `🕹 ${theMember.presence.game}`,
+					name: ':paintbrush: **User color :**',
+					value: `\`${theMember.displayHexColor}\``,
 					inline: true,
 				},
 				{
-					name: '**Join the guild at :**',
+					name: ':hourglass: **Join the guild at :**',
 					value: `${theMember.joinedAt}`,
 					inline: true,
 				},
 				{
-					name: '**Roles :**',
+					name: ':necktie: **Roles :**',
 					value: `${roleList}`,
 					inline: true,
 				},
 				{
-					name: '**Highest role :**',
+					name: ':trophy: **Highest role :**',
 					value: `${theMember.highestRole.name}`,
 					inline: true,
 				},
 				{
-					name: '**User color :**',
-					value: `${theMember.displayHexColor}`,
-					inline: true,
-				},
-				{
-					name: '**Role color :**',
-					value: `${theMember.colorRole.hexColor}`,
-					inline: true,
-				},
-				{
-					name: '**Kickable :**',
+					name: ':x: **Kickable :**',
 					value: `${theMember.kickable}`,
 					inline: true,
 				},
 				{
-					name: '**Bannable :**',
+					name: ':no_entry_sign: **Bannable :**',
 					value: `${theMember.bannable}`,
 					inline: true,
 				},
