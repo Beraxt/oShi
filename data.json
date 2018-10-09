@@ -55,12 +55,12 @@
         },
         {
             "index": 1,
-            "message": "@without role"
+            "message": "@withoutrole"
         },
         {
             "index": 2,
             "message": "@everyone"
-        },
+        }
     ],
     "security": [
         {
