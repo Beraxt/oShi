@@ -24,27 +24,27 @@
     "epenis": [
         {
             "size": 2.5,
-            "animal": "cat",
+            "animal": "cat :cat:",
             "pic": "https://img-aws.ehowcdn.com/600x600p/photos.demandstudios.com/getty/article/165/76/87490163.jpg"
         },
         {
             "size": 5,
-            "animal": "orangutans",
+            "animal": "orangutans :monkey:",
             "pic": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Orang_Utan%2C_Semenggok_Forest_Reserve%2C_Sarawak%2C_Borneo%2C_Malaysia.JPG/290px-Orang_Utan%2C_Semenggok_Forest_Reserve%2C_Sarawak%2C_Borneo%2C_Malaysia.JPG"
         },
         {
             "size": 7.5,
-            "animal": "human",
+            "animal": "human :eye:",
             "pic": "https://jooinn.com/images/thumbs-up-1.png"
         },
         {
             "size": 10,
-            "animal": "dog",
+            "animal": "dog :dog:",
             "pic": "https://images.theconversation.com/files/205966/original/file-20180212-58348-7huv6f.jpeg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip"
         },
         {
             "size": 12.5,
-            "animal": "sea turtle",
+            "animal": "sea turtle :turtle:",
             "pic": "http://www.zlechien.fr/wp-content/uploads/2017/07/turtle5.jpg"
         }
     ],
@@ -87,19 +87,19 @@
     "status": [
         {
             "status": "online",
-            "message": "Ready to chat ! 🍏"
+            "message": "Ready to chat ! :green_apple:"
         },
         {
             "status": "idle",
-            "message": "AFK. 🍊"
+            "message": "AFK. :orange:"
         },
         {
             "status": "dnd",
-            "message": "Busy I think ? 🍅"
+            "message": "Busy I think ? :tomato"
         },
         {
             "status": "offline",
-            "message": "Sleeping.. 🥚"
+            "message": "Sleeping.. :egg:"
         }
     ],
     "responses": [

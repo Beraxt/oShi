@@ -12,6 +12,6 @@ module.exports = {
 	execute(message) {
 		const responsesArray = [];
 		responsesArray.push(responses.map(response => '`' + response.cited + '` ➤  *' + response.response + '*').join('\n'));
-		message.channel.send(responsesArray);
+		return message.channel.send(responsesArray);
 	},
 };

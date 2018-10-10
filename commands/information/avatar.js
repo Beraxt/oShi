@@ -10,27 +10,30 @@ module.exports = {
 	execute(message, args) {
 		if (!args.length) {
 			const theUser = message.author;
+			const theMember = message.member;
 			const exampleEmbed = {
-				color: 0x00ffd8,
+				color: theMember.displayColor,
 				title: `${theUser.username}'s avatar:`,
 				url: `${theUser.avatarURL}`,
 				image: {
 					url: `${theUser.avatarURL}`,
 				},
 			};
-			message.channel.send({ embed: exampleEmbed });
+			return message.channel.send({ embed: exampleEmbed });
 		}
 		else {
 			const theUser = message.mentions.users.first();
+			const theMember = message.mentions.members.first();
+
 			const exampleEmbed = {
-				color: 0x00ffd8,
+				color: theMember.displayColor,
 				title: `${theUser.username}'s avatar:`,
 				url: `${theUser.avatarURL}`,
 				image: {
 					url: `${theUser.avatarURL}`,
 				},
 			};
-			message.channel.send({ embed: exampleEmbed });
+			return message.channel.send({ embed: exampleEmbed });
 		}
 	},
 };
