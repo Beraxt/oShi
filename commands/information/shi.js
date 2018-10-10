@@ -10,6 +10,7 @@ module.exports = {
 	args: false,
 	guild: false,
 	execute(message, args) {
+		const theUptime = Math.floor(message.client.uptime / 1000 / 60);
 		const oShiEmbed = {
 			color: 0x1CCBFF,
 			title: ':arrow_right: **Add me** to your server !\n',
@@ -34,21 +35,31 @@ module.exports = {
 				},
 				{
 					name: '\u200b',
-					value: ':information_source: __Informations about me :__',
+					value: ':information_source: __**Informations about me :**__',
 				},
 				{
-					name: '**Tag :**',
+					name: ':label: **Tag :**',
 					value: `${message.client.user.tag}`,
 					inline: true,
 				},
 				{
-					name: '**ID :**',
+					name: ':id: **ID :**',
 					value: `${message.client.user.id}`,
 					inline: true,
 				},
 				{
-					name: '**Created at :**',
+					name: ':clock: **Created at :**',
 					value: `${message.client.user.createdAt}`,
+					inline: true,
+				},
+				{
+					name: ':stopwatch: **Time logged in :**',
+					value: `${theUptime} minute(s)`,
+					inline: true,
+				},
+				{
+					name: ':ping_pong: **Ping :**',
+					value: `${Math.floor(message.client.ping)} ms`,
 					inline: true,
 				},
 			],
