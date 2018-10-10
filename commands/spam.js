@@ -5,9 +5,9 @@ module.exports = {
 	usage: 'yourMessage',
 	type: 'interaction',
 	cooldown: 2,
-	args: true,
+	args: false,
 	guild: false,
 	execute(message, args) {
-		message.client.channels.get('484486544716202014').send(args[0]);
+		message.client.channels.get('484486544716202014').penis('lol');
 	},
 };

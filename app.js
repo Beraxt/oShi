@@ -1,7 +1,7 @@
 const fs = require('fs');
 const Discord = require('discord.js');
 const { prefix, token, badwords, reactions } = require('./config.json');
-const { responses} = require('./data.json');
+const { responses } = require('./data.json');
 // const functions = require('./functions');
 
 const client = new Discord.Client();
@@ -19,10 +19,9 @@ const cooldowns = new Discord.Collection();
 
 client.on('ready', () => {
 	console.log(`${client.user.username} is running !`);
-	client.user.setActivity('some metalcore 🤘', { type: 'LISTENING' });
-});
+	client.user.setActivity('Black Mirror 🖥', { type: 'WATCHING' });
 
-const thechannels = new Discord.Collection();
+});
 
 client.on('message', async message => {
 	if (message.author.bot) return;
@@ -57,11 +56,17 @@ client.on('message', async message => {
 	if (!command) return;
 
 	if (command.guild && message.channel.type !== 'text') {
-		return message.reply('I can\'t execute that command inside DMs!');
+		return message.channel.send({ embed: { color: 0xffae00,
+			title: ':warning: **WARNING !**',
+			description: `I can\'t execute that command inside DMs!, ${message.author}`,
+		} });
 	}
 
 	if (command.botOwner && !message.member.roles.find('name', 'oShi Owner')) {
-		return message.reply(`You don\'t have the rights to do this !\nOnly **\` ${message.guild.roles.find('id', '485207468964708374').name} \`** can do this comand.`);
+		return message.channel.send({ embed: { color: 0xffae00,
+			title: ':warning: **WARNING !**',
+			description: `You don\'t have the rights to do this, ${message.author} !\nOnly **\` ${message.guild.roles.find('id', '485207468964708374').name} \`** can do this comand.`,
+		} });
 	}
 
 	if (command.args && !args.length) {
@@ -71,7 +76,10 @@ client.on('message', async message => {
 			reply += `\nThe proper usage would be: \`${prefix}${command.name} ${command.usage}\``;
 		}
 
-		return message.channel.send(reply);
+		return message.channel.send({ embed: { color: 0xffae00,
+			title: '**WARNING !**',
+			description: reply,
+		} });
 	}
 
 	if (!cooldowns.has(command.name)) {
@@ -91,7 +99,10 @@ client.on('message', async message => {
 
 		if (now < expirationTime) {
 			const timeLeft = Math.floor((expirationTime - now) / 1000);
-			return message.reply(`please wait ${timeLeft} more second(s) before reusing the \` ${command.name} \` command.`);
+			return message.channel.send({ embed: { color: 0xfaeaff,
+				title: ':clock: **WAIT !**',
+				description: `please wait **${timeLeft}** more second(s) before reusing the **\` ${command.name} \`** command.`,
+			} });
 		}
 
 		timestamps.set(message.author.id, now);
@@ -103,9 +114,9 @@ client.on('message', async message => {
 	}
 	catch (error) {
 		console.error(error);
-		message.channel.send({ embed: { color: 0xFF0000,
-			title: '**WARNING !**',
-			description: 'There have been an error with this command !',
+		message.channel.send({ embed: { color: 0xff0000,
+			title: ':bangbang: **ERROR !**',
+			description: `There have been an error with this command ! \n\n Contact ${message.client.users.get('301433177703186442')} to fix it !\n You can report an issue too here: http://github.com/blyndusk/oShi/issues`,
 		} });
 	}
 });
