@@ -65,23 +65,23 @@
     "security": [
         {
             "index": 0,
-            "message": "🗑 Less secure than a Wordpress"
+            "message": ":wastebasket: Less secure than a Wordpress"
         },
         {
             "index": 1,
-            "message": "🥉 Every random can ruin your server"
+            "message": ":third_place: Every random can ruin your server"
         },
         {
             "index": 2,
-            "message": "🥈 Every patient random can ruin your server"
+            "message": ":second_place: Every patient random can ruin your server"
         },
         {
             "index": 3,
-            "message": "🥇 Every very patient random can ruin your server"
+            "message": ":first_place Every very patient random can ruin your server"
         },
         {
             "index": 4,
-            "message": "🏆 Every connected random can ruin your server"
+            "message": ":trophy: Every connected random can ruin your server"
         }
     ],
     "status": [
