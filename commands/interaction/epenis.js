@@ -2,7 +2,7 @@ const { epenis } = require('../../data.json');
 
 module.exports = {
 	name: 'epenis',
-	description: ':eggplant **|** Give a size of your e-penis o/',
+	description: ':eggplant: **|** Give a size of your e-penis o/',
 	aliases: ['e', 'penis', 'pickle'],
 	usage: '|| @user',
 	type: 'interaction',
