@@ -5,7 +5,7 @@ module.exports = {
 	description: 'Restart the bot',
 	aliases: ['reload'],
 	usage: '',
-	type: 'interaction',
+	type: '',
 	cooldown: 2,
 	args: false,
 	guild: false,

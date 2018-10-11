@@ -3,7 +3,7 @@ module.exports = {
 	description: 'write your message in another channel',
 	aliases: ['sp'],
 	usage: 'yourMessage',
-	type: 'interaction',
+	type: '',
 	cooldown: 2,
 	args: false,
 	guild: false,

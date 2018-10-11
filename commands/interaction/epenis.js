@@ -15,17 +15,18 @@ module.exports = {
 		for (let i = 0; i < epenis.length; i++) {
 			if (penisSize <= epenis[i].size) {
 				const pic = {
-					color: 0x0099ff,
+					color: 0xff19e8,
+					title: '',
 					image: {
 						url: epenis[i].pic,
 					},
 				};
 				if (!message.mentions.users.size) {
-					message.channel.send('Your *e-penis* size is **' + penisSize + ' inches**, like a ' + epenis[i].animal);
+					pic.title = 'Your *e-penis* size is **' + penisSize + ' inches**, like a ' + epenis[i].animal;
 					return message.channel.send({ embed: pic });
 				}
 				else {
-					message.channel.send('The ' + args[0] + '\'s *e-penis* size is **' + penisSize + ' inches**, like a ' + epenis[i].animal);
+					pic.title = 'The ' + args[0] + '\'s *e-penis* size is **' + penisSize + ' inches**, like a ' + epenis[i].animal;
 					return message.channel.send({ embed: pic });
 				}
 			}
