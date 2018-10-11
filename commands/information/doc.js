@@ -17,3 +17,5 @@ module.exports = {
 		message.author.send('**Here is some documentation about how to make a Discord bot in Javascript :yellow_heart:**\n*Discord.js :* https://discord.js.org/#/docs/main/stable/general/welcome \n*Discord.js Guide :* https://discordjs.guide/#/');
 	},
 };
+
+// v
