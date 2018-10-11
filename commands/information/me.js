@@ -1,4 +1,3 @@
-const { prefix } = require('../../config.json');
 const { status } = require('../../data.json');
 
 module.exports = {
@@ -10,21 +9,18 @@ module.exports = {
 	cooldown: 30,
 	args: false,
 	guild: false,
-	execute(message, args) {
+	execute(message) {
 		const theUser = message.author;
 		const theMember = message.member;
-
 		const roleList = theMember.roles.map(role => ' ' + role.name);
 		roleList.shift();
 		let authorStatus = theUser.presence.status;
 		for (let i = 0; i < status.length; i++) {
 			if (authorStatus === status[i].status) authorStatus = status[i].message;
 		}
-
 		const authorEmbed = {
 			color: theMember.displayColor,
 			title: ':point_down: __**P E R S O N A L   I N F O R M A T I O N S**__ :point_down:',
-			// url: `${theUser.avatarURL}`,
 			author: {
 				name: `${theUser.tag}`,
 				icon_url: `${theUser.avatarURL}`,
@@ -110,7 +106,8 @@ module.exports = {
 				icon_url: `${message.client.user.avatarURL}`,
 			},
 		};
-		message.channel.send({ embed: authorEmbed });
-
+		return message.channel.send({ embed: authorEmbed });
 	},
 };
+
+// v
