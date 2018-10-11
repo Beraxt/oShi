@@ -15,3 +15,5 @@ module.exports = {
 		return message.channel.send(responsesArray);
 	},
 };
+
+// v
