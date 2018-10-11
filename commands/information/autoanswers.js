@@ -2,7 +2,7 @@ const { responses } = require('../../data.json');
 
 module.exports = {
 	name: 'autoanswers',
-	description: ':card_box: **|** Send a list of the auto answers of the bot ! ',
+	description: ':card_box: **|** Send a list of the auto answers of the bot !',
 	aliases: ['aa', 'auto', 'answers', 'answer'],
 	usage: '',
 	type: 'information',
