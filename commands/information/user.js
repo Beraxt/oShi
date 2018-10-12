@@ -1,4 +1,4 @@
-const { prefix } = require('../../config.json');
+const { status } = require('../../data.json');
 
 module.exports = {
 	name: 'user',
@@ -8,36 +8,19 @@ module.exports = {
 	type: 'information',
 	cooldown: 30,
 	args: true,
-	guild: false,
+	guild: true,
 	execute(message, args) {
 		const theUser = message.mentions.users.first();
 		const theMember = message.mentions.members.first();
-		console.log('theUser = ');
-		console.log(theUser);
-		console.log('theMember = ');
-		console.log(theMember);
 		const roleList = theMember.roles.map(role => ' ' + role.name);
 		roleList.shift();
 		let authorStatus = theUser.presence.status;
-		switch (authorStatus) {
-		case 'online':
-			authorStatus = 'Ready to chat ! :green_apple';
-			break;
-		case 'idle':
-			authorStatus = 'AFK. :orange:';
-			break;
-		case 'dnd':
-			authorStatus = 'Busy I think ? :tomato:';
-			break;
-		case 'offline':
-			authorStatus = 'Sleeping.. :egg:';
-			break;
+		for (let i = 0; i < status.length; i++) {
+			if (authorStatus === status[i].status) authorStatus = status[i].message;
 		}
-
 		const userEmbed = {
 			color: theMember.displayColor,
 			title: ':point_down: __**U S E R   I N F O R M A T I O N S**__ :point_down:',
-			// url: `${theUser.avatarURL}`,
 			author: {
 				name: `${theUser.tag}`,
 				icon_url: `${theUser.avatarURL}`,
@@ -123,6 +106,8 @@ module.exports = {
 				icon_url: `${message.client.user.avatarURL}`,
 			},
 		};
-		message.channel.send({ embed: userEmbed });
+		return message.channel.send({ embed: userEmbed });
 	},
 };
+
+// v
