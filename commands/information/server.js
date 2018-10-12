@@ -9,13 +9,9 @@ module.exports = {
 	cooldown: 15,
 	args: false,
 	guild: true,
-	execute(message, args) {
+	execute(message) {
 		const theGuild = message.guild;
-
-		let sizeMessage = '';
-		if (theGuild.large) sizeMessage = 'This server is huge :muscle: !';
-		else sizeMessage = 'This server is so little :baby: !';
-
+		const sizeMessage = theGuild.large ? 'This server is huge :muscle: !' : 'This server is so little :baby: !';
 		let securityMessage = '';
 		for (let i = 0; i < security.length; i++) {
 			if (theGuild.mfaLevel === security[i].index) securityMessage = security[i].message;
@@ -31,22 +27,11 @@ module.exports = {
 		statusMap.set('dnd', 0);
 		statusMap.set('offline', 0);
 		for (const [key, value] of theGuild.members) {
-			switch (value.presence.status) {
-			case 'online':
-				statusMap.set('online', statusMap.get('online') + 1);
-				break;
-			case 'idle':
-				statusMap.set('idle', statusMap.get('idle') + 1);
-				break;
-			case 'dnd':
-				statusMap.set('dnd', statusMap.get('dnd') + 1);
-				break;
-			case 'offline':
-				statusMap.set('offline', statusMap.get('offline') + 1);
-				break;
-			}
+			const statusValue = value.presence.status;
+
+			statusMap.has(statusValue) ? statusMap.set(statusValue, statusMap.get(statusValue) + 1) : statusMap.set(statusValue, 1);
 		}
-		const statusList = '**🍏 ' + statusMap.get('online') + '  🍊 ' + statusMap.get('idle') + '  🍅 ' + statusMap.get('dnd') + ' 🥚' + statusMap.get('offline') + '**';
+		const statusList = `**🍏 ${statusMap.get('online')}  🍊 ${statusMap.get('idle')}   🍅 ${statusMap.get('dnd')} 🥚${statusMap.get('offline')}**`;
 
 		let afkChannel;
 		if (theGuild.afkChannel) afkChannel = theGuild.afkChannel.name;
@@ -55,7 +40,6 @@ module.exports = {
 		const guildEmbed = {
 			color: 0x1CCBFF,
 			title: ':point_down: __**S E R V E R / G U I L D   I N F O R M A T I O N S**__ :point_down:',
-			// url: `${theGuild.iconURL}`,
 			author: {
 				name: `${theGuild.name}`,
 				icon_url: `${theGuild.iconURL}`,
@@ -118,7 +102,9 @@ module.exports = {
 				icon_url: `${message.client.user.avatarURL}`,
 			},
 		};
-		if (message.guild.available) message.channel.send({ embed: guildEmbed });
+		if (message.guild.available) return message.channel.send({ embed: guildEmbed });
 	},
 };
+
+// v
 
