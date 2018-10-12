@@ -11,7 +11,6 @@ module.exports = {
 	guild: false,
 	execute(message, args) {
 		const penisSize = Math.floor(Math.random() * Math.floor(20));
-
 		for (let i = 0; i < epenis.length; i++) {
 			if (penisSize <= epenis[i].size) {
 				const pic = {
@@ -21,14 +20,9 @@ module.exports = {
 						url: epenis[i].pic,
 					},
 				};
-				if (!message.mentions.users.size) {
-					pic.title = 'Your *e-penis* size is **' + penisSize + ' inches**, like a ' + epenis[i].animal;
-					return message.channel.send({ embed: pic });
-				}
-				else {
-					pic.title = 'The ' + args[0] + '\'s *e-penis* size is **' + penisSize + ' inches**, like a ' + epenis[i].animal;
-					return message.channel.send({ embed: pic });
-				}
+				const mention = !args.length ? 'Your *e-penis* size' : `The **${message.mentions.users.first().username}**\'s *e-penis* size`;
+				pic.title = `${mention} is **${penisSize} inches**, like a ${epenis[i].animal}`;
+				return message.channel.send({ embed: pic });
 			}
 		}
 	},
