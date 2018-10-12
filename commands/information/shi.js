@@ -69,6 +69,8 @@ module.exports = {
 				icon_url: `${message.client.user.avatarURL}`,
 			},
 		};
-		message.channel.send({ embed: oShiEmbed });
+		return message.channel.send({ embed: oShiEmbed });
 	},
 };
+
+// v
