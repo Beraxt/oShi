@@ -21,6 +21,33 @@
             "action_end": " with passion ! :fist:"
         }
     ],
+    "activity": [
+        {
+            "type": "PLAYING",
+            "activity": "o/help"
+        },
+        {
+            "type": "LISTENING",
+            "activity": "dope metalcore 🤘"
+        },
+        {
+            "type": "WATCHING",
+            "activity": "Nerve 🌆"
+        },
+        {
+            "type": "PLAYING",
+            "activity": "with @blyndusk"
+        },
+        {
+            "type": "LISTENING",
+            "activity": "some k-pop 🇰🇷"
+        },
+
+        {
+            "type": "WATCHING",
+            "activity": "Shut up & Dance 📵"
+        }
+    ],
     "epenis": [
         {
             "size": 2.5,
