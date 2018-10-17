@@ -1,35 +1,32 @@
 const fs = require('fs');
 const Discord = require('discord.js');
 const { prefix, token, badwords, reactions } = require('./config.json');
-const { responses } = require('./data.json');
-// const functions = require('./functions');
+const { activity, responses } = require('./data.json');
+const dbconf = require('./dbconf.js');
 
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
-
-// functions.loadFiles('./commands')
-// functions.loadFiles('./commands/interaction');
-// functions.loadFiles('./commands/information');
-
 loadFiles('./commands');
 loadFiles('./commands/interaction');
 loadFiles('./commands/information');
 
 const cooldowns = new Discord.Collection();
 
-client.on('ready', () => {
+client.on('ready', async () => {
 	console.log(`${client.user.username} is running !`);
-	client.user.setActivity('Black Mirror 🖥', { type: 'WATCHING' });
+	const random = Math.floor(Math.random() * Math.floor(activity.length));
+	client.user.setActivity(activity[random].activity, { type: activity[random].type });
 
+	dbconf.configure();
+	const query = await dbconf.execute('select * from user');
 });
-
 client.on('message', async message => {
 	if (message.author.bot) return;
 	for (let i = 0; i < badwords.length; i++) {
 		if (message.content.includes(badwords[i])) {
 			message.channel.bulkDelete(1, true);
 			message.channel.send({ embed: { color: 0xFF0000,
-				title: '**WARNING !**',
+				title: '**OOPS ..**',
 				description: 'Don\'t use bad language please :frowning: !',
 			} });
 		}
@@ -57,14 +54,14 @@ client.on('message', async message => {
 
 	if (command.guild && message.channel.type !== 'text') {
 		return message.channel.send({ embed: { color: 0xffae00,
-			title: ':warning: **WARNING !**',
+			title: ':warning: **OOPS ..**',
 			description: `I can\'t execute that command inside DMs!, ${message.author}`,
 		} });
 	}
 
 	if (command.botOwner && !message.member.roles.find('name', 'oShi Owner')) {
 		return message.channel.send({ embed: { color: 0xffae00,
-			title: ':warning: **WARNING !**',
+			title: ':warning: **OOPS ..**',
 			description: `You don\'t have the rights to do this, ${message.author} !\nOnly **\` ${message.guild.roles.find('id', '485207468964708374').name} \`** can do this comand.`,
 		} });
 	}
@@ -77,7 +74,7 @@ client.on('message', async message => {
 		}
 
 		return message.channel.send({ embed: { color: 0xffae00,
-			title: '**WARNING !**',
+			title: '**OOPS ..**',
 			description: reply,
 		} });
 	}
@@ -130,7 +127,10 @@ client.login(token);
 function loadFiles(folderPath) {
 	const commandFiles = fs.readdirSync(folderPath).filter(file => file.endsWith('.js'));
 	for (const file of commandFiles) {
-		const command = require(`` + folderPath + `/${file}`);
+		// const command = require(`` + folderPath + `/${file}`);
+		const command = require(`${folderPath}/${file}`);
 		client.commands.set(command.name, command);
 	}
 }
+
+// 12/15
