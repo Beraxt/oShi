@@ -1,14 +1,15 @@
 module.exports = {
 	name: 'nickname',
 	description: ':label: **|** Change your username',
-	aliases: ['nick'],
+	aliases: ['nick', 'name'],
 	usage: 'yourNickname',
 	type: 'interaction',
 	cooldown: 30,
 	args: true,
 	guild: true,
 	execute(message, args) {
-		message.member.setNickname(args[0])
+		const newUsername = args.join(' ');
+		message.member.setNickname(newUsername)
   	.then(console.log)
   	.catch(console.error);
 	},

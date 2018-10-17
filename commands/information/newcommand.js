@@ -6,7 +6,7 @@ module.exports = {
 	description: ':loudspeaker: **|** Make a general announce about a new command',
 	aliases: ['n', 'nc', 'new'],
 	usage: '<command>',
-	type: 'interaction',
+	type: 'information',
 	cooldown: 999,
 	args: true,
 	guild: false,

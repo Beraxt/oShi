@@ -1,8 +1,6 @@
-const { lovePercent } = require('../../data.json');
-
 module.exports = {
 	name: 'lovebetween',
-	description: ':eggplant: **|** Give a size of your e-penis o/',
+	description: ':heart: **|** Calculate the love between two users o/',
 	aliases: ['l', 'love', 'lovebt', 'lbt'],
 	usage: '@user @user',
 	type: 'interaction',
@@ -11,11 +9,12 @@ module.exports = {
 	guild: true,
 	execute(message, args) {
 		const love = Math.floor(Math.random() * Math.floor(100));
+		const loveFigure = Math.round(love / 10);
 		const loveArray = [];
-		for (let i = 0; i < Math.round(love / 10); i++) {
+		for (let i = 0; i < loveFigure; i++) {
 			loveArray.push(':heart:');
 		}
-		for (let j = 0; j < 10 - Math.round(love / 10); j++) {
+		for (let j = 0; j < 10 - loveFigure; j++) {
 			loveArray.push(':broken_heart:');
 		}
 		const lovebetween = {
@@ -23,9 +22,6 @@ module.exports = {
 			title: ':heartpulse: LOVE CALCULATOR :heartpulse:',
 			description: `The **${args[0]}** & **${args[1]}**'s love is **${love}%**\n
 			[${loveArray.join('')}]`,
-			// image: {
-			// 	url: epenis[i].pic,
-			// },
 		};
 		if (args.length < 2) {
 			return message.channel.send({ embed: { color: 0xffae00,

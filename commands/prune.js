@@ -3,7 +3,7 @@ module.exports = {
 	description: 'Delete a specific number of messages between 1 and 99',
 	aliases: ['delete'],
 	usage: '<amount>',
-	type: 'moderation',
+	type: '',
 	cooldown: 2,
 	args: true,
 	guild: false,

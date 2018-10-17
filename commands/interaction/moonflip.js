@@ -16,7 +16,7 @@ module.exports = {
 		const moonflip = {
 			color: color,
 			title: 'MOON FLIP ( *like a coinflip, but w/ a moon* )',
-			description: `:${result}_moon: **|** The moon is ${result}, ${message.author} !`,
+			description: `:${result}_moon: **|** The moon is **${result}**, ${message.author} !`,
 		};
 		return message.channel.send({ embed: moonflip });
 	},
