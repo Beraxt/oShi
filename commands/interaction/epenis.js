@@ -14,7 +14,7 @@ module.exports = {
 		for (let i = 0; i < epenis.length; i++) {
 			if (penisSize <= epenis[i].size) {
 				const pic = {
-					color: 0xff19e8,
+					color: 0xdc00ff,
 					title: '',
 					image: {
 						url: epenis[i].pic,
@@ -27,3 +27,5 @@ module.exports = {
 		}
 	},
 };
+
+// v
