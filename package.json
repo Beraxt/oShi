@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "tslint -c tslint.json -p tsconfig.json",
     "lint:fix": "npm run lint -- --fix",
-    "build": "npm run lint && tsc",
+    "build": "npm run lint:fix && tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,6 +25,8 @@
     "typescript": "^3.6.4"
   },
   "dependencies": {
+    "@types/node": "^12.11.7",
+    "discord.js": "^11.5.1",
     "mongodb": "^3.3.3"
   }
 }
